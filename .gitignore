@@ -8,7 +8,6 @@ obj/
 *.dylib
 *.dll
 *.lib
-
 # Code::Blocks project files (excluding .cbp)
 *.depend
 *.layout
