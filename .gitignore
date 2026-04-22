@@ -11,7 +11,10 @@ obj/
 # Code::Blocks project files (excluding .cbp)
 *.depend
 *.layout
-ressources/
+*.wav
+*.png
+*.ttf
+*.mp3
 # OS generated files
 .DS_Store
 Thumbs.db
