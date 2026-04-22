@@ -1,0 +1,53 @@
+#Conception
+	- Il faut réfléchir avant d'écrire du code 
+	-Utiliser un Outil UML pour la Conception
+	- Les design patterns (Patrons de Conception)
+
+
+# Les Fonctionnalités du C++
+	-- Les Templates <template>
+		+ Templates récursives 
+		+Classes de politiques
+		+Classes de traits
+		
+	-- Les 
+	
+	-- Les références de rvalue (R&&) et le déplacement
+
+# Autres Bibliothèques
+	*** Comment apprendre une bibliothèque:
+			-Il est important de lire la documentation officielle 
+			- Aprrendre les classes et les méthodes liées  à cette bibliothèque
+			- IL faut toujours vérifier la ***licence*** des bibliothèques utilisées
+
+	
+	
+	*** Autres Bibliothèque:
+			- boost (Collection de bibliothèque visant à complèter le C++)
+			- Bibliothèque de GUI (Graphical User Interface)
+					-- Gtkmm (exemple: Firefox)
+					-- Qt (exemple: Photoshop)
+					-- WxWidgets ( exemple: Code::Blocks)	
+			- Bibliothèque 3D : 
+			
+					*API graphique : gère uniquement l'affichage 3D, elle est de bas niveau
+							--OpenGL : API graphique 
+							
+					*Moteur 3D : permettre de gérer un meilleur affichage avec plus de fonctionnalités. Il est un peu plus de Haut niveau que API graphique
+					
+							-- Ogre : Moteur 3D
+							-- Unleashed : Moteur 3D
+							***La possibilité de charger des modèles  que avez créé avec un logiciel 3D
+							***La posibilité de charger des textures complexes comme des textures miroirs, des textures de vert
+							
+					*Moteur de Jeu :  Gère en plus de l'affchage , la physique, les évènements 
+					
+							-- Unity : Moteur de Jeu
+							-- Unreal : Moteur de Jeu
+# Conversion de fichier audio .mp3 en .wav  avec  ***ffmpeg***
+
+	 --  $ffmpeg -i winnerSound.mp3 winnerSound.wav
+	 -- 
+
+	
+					

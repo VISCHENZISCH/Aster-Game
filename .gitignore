@@ -1,0 +1,21 @@
+# Build artifacts
+bin/
+obj/
+*.exe
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+*.lib
+
+# Code::Blocks project files (excluding .cbp)
+*.depend
+*.layout
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# User specific files
+meilleur_score.txt
