@@ -18,6 +18,7 @@ class Vaisseau : public ElementEspace {
 		// Surchage d'une methode de la classe mère
 		
 		virtual void reagirCollision(TypeElement typeAutre) override;
+		virtual void afficher(sf::RenderWindow& fenetre) const override;
 
 	
 	protected:
@@ -25,6 +26,7 @@ class Vaisseau : public ElementEspace {
 		
 	private:
 		void actualiserEtat();
+		void tirer();
 		bool accelerationEnCours{false};
 		bool tourneAGauche{false};
 		bool tourneADroite{false};
@@ -32,10 +34,16 @@ class Vaisseau : public ElementEspace {
 		Jeu& jeu;
 		Espace& espace;
 		sf::Clock dernierTir{};
+		sf::Clock chronoInvincibilite{};
+		sf::Clock chronoHyperspace{};
+		sf::Color couleurBase;
 		
-		static constexpr float ACCELERATION{7000.f};
-		static constexpr float COEFF_FROTTEMENTS{2.f};
-		static constexpr float VITESSE_ANGULAIRE{100.f};
+		static constexpr float ACCELERATION{1200.f};
+		static constexpr float COEFF_FROTTEMENTS{1.5f}; // Vitesse max = ACCELERATION / COEFF_FROTTEMENTS
+		static constexpr float VITESSE_ANGULAIRE{250.f};
+		static constexpr float CADENCE_TIR{0.1f};
+		static constexpr float CADENCE_TIR_RAPIDE{0.05f};
+		static constexpr float DUREE_INVINCIBILITE{2.5f};
 		
 };
 

@@ -7,9 +7,10 @@
 
 // Constructeur de classe et paramétrage 
 ElementEspace::ElementEspace(std::string_view const& cheminImage){
-	
-	sprite.setTexture(GestionnaireRessources<sf::Texture>::getRessources(cheminImage));
-	sprite.setOrigin(sprite.getLocalBounds().width / 2, sprite.getLocalBounds().height / 2);
+	if (!cheminImage.empty()) {
+		sprite.setTexture(GestionnaireRessources<sf::Texture>::getRessources(cheminImage));
+		sprite.setOrigin(sprite.getLocalBounds().width / 2, sprite.getLocalBounds().height / 2);
+	}
 	sprite.setPosition(position.getX(), position.getY());
 	
 }
@@ -34,7 +35,7 @@ void ElementEspace::afficher(sf::RenderWindow& fenetre) const {
 	for(auto& affichage : affichages) {
 		auto transformation = sf::Transform{};
 		transformation.translate(affichage.x * Coordonnees::getLongueurEspace(), affichage.y * Coordonnees::getHauteurEspace());
-		fenetre.draw(sprite);
+		fenetre.draw(sprite, transformation);
 		
 	}
 	

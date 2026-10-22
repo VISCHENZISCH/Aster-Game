@@ -4,6 +4,7 @@
 #include <iostream>
 #include "ExceptionRessourceIntrouvable.h"
 #include <string_view>
+#include <string>
 #include <unordered_map>
 
 
@@ -13,12 +14,14 @@ class GestionnaireRessources
 	public:
 		GestionnaireRessources() = delete;
 		static T const& getRessources(std::string_view const& chemin) {
-				auto resultat = ressources.find(chemin);
+				auto cle = std::string{chemin};
+				auto resultat = ressources.find(cle);
 				if(resultat == std::end(ressources)) {
-					if(!ressources[chemin].loadFromFile(chemin.data())) {
+					if(!ressources[cle].loadFromFile(cle)) {
+							ressources.erase(cle);
 							throw ExceptionRessourceIntrouvable{chemin};
 					}
-					return ressources[chemin];
+					return ressources[cle];
 				}
 				return resultat->second;
 		}
@@ -26,7 +29,7 @@ class GestionnaireRessources
 	protected:
 
 	private:
-		static std::unordered_map<std::string_view, T> ressources;
+		static std::unordered_map<std::string, T> ressources;
 };
 
 #endif // GESTIONNAIRERESSOURCES_H

@@ -17,7 +17,9 @@ class Espace
 		void afficher(sf::RenderWindow& fenetre) const;
 		void nettoyer();
 		void vider();
+		inline void reinitialiserChrono() { chrono.restart(); };
 		inline bool espaceEstVide() const { return elements.empty() && aAjouter.empty();};
+		bool possedeAsteroide() const;
 
 	protected:
 

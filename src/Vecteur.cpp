@@ -11,6 +11,12 @@ void Vecteur::operator-=(Vecteur const& autre) {
 	x -= autre.x;
 	y -= autre.y;
 }
+Vecteur Vecteur::operator+(Vecteur const& autre) const {
+	return {x + autre.x, y + autre.y};
+}
+Vecteur Vecteur::operator-(Vecteur const& autre) const {
+	return {x - autre.x, y - autre.y};
+}
 Vecteur Vecteur::operator*(float coefficient) const {
 	return {x * coefficient, y * coefficient};
 }

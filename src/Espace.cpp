@@ -52,3 +52,13 @@ void Espace::vider() {
 	elements.clear();
 	aAjouter.clear();
 }
+
+bool Espace::possedeAsteroide() const {
+	for(auto const& elem : elements) {
+		if (elem->getType() == TypeElement::ASTEROIDE) return true;
+	}
+	for(auto const& elem : aAjouter) {
+		if (elem->getType() == TypeElement::ASTEROIDE) return true;
+	}
+	return false;
+}

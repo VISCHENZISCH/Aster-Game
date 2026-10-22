@@ -6,6 +6,8 @@ struct Vecteur
 {
 	void operator+=(Vecteur const& autre);
 	void operator-=(Vecteur const& autre);
+	Vecteur operator+(Vecteur const& autre) const;
+	Vecteur operator-(Vecteur const& autre) const;
 	Vecteur operator*(float coefficient) const;
 	static Vecteur creerDepuisAngle(float taille, float angleEnDegre);
 	float x{0.f};

@@ -6,7 +6,7 @@
 #include "Vecteur.h"
 #include "Coordonnees.h"
 
-enum class TypeElement {VAISSEAU, ASTEROIDE, MISSILE, AUTRE};
+enum class TypeElement {VAISSEAU, ASTEROIDE, MISSILE, BONUS, AUTRE};
 class ElementEspace
 {
 	public:
@@ -20,7 +20,8 @@ class ElementEspace
 		static inline bool elementEstDetruit(std::unique_ptr<ElementEspace>& element) { return element->estDetruit;};
 		// Méthodes virtual Pure 
 		virtual void reagirCollision(TypeElement typeAutre) = 0;
-		float getRayon() const;
+		virtual float getRayon() const;
+		inline TypeElement getType() const { return type; }
 		
 	protected:
 		

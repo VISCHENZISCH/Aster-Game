@@ -41,27 +41,33 @@
 			<Add option="-lsfml-audio" />
 		</Linker>
 		<Unit filename="include/Asteroide.h" />
+		<Unit filename="include/Bonus.h" />
 		<Unit filename="include/Coordonnees.h" />
 		<Unit filename="include/ElementEspace.h" />
 		<Unit filename="include/Espace.h" />
 		<Unit filename="include/ExceptionRessourceIntrouvable.h" />
 		<Unit filename="include/Explosion.h" />
+		<Unit filename="include/FondEtoile.h" />
 		<Unit filename="include/GestionnaireRessources.h" />
 		<Unit filename="include/Jeu.h" />
 		<Unit filename="include/Missile.h" />
+		<Unit filename="include/Particule.h" />
 		<Unit filename="include/Vaisseau.h" />
 		<Unit filename="include/Vecteur.h" />
 		<Unit filename="include/font.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Asteroide.cpp" />
+		<Unit filename="src/Bonus.cpp" />
 		<Unit filename="src/Coordonnees.cpp" />
 		<Unit filename="src/ElementeEspace.cpp" />
 		<Unit filename="src/Espace.cpp" />
 		<Unit filename="src/ExceptionRessourceIntrouvable.cpp" />
 		<Unit filename="src/Explosion.cpp" />
+		<Unit filename="src/FondEtoile.cpp" />
 		<Unit filename="src/GestionnaireRessources.cpp" />
 		<Unit filename="src/Jeu.cpp" />
 		<Unit filename="src/Missile.cpp" />
+		<Unit filename="src/Particule.cpp" />
 		<Unit filename="src/Vaisseau.cpp" />
 		<Unit filename="src/Vecteur.cpp" />
 		<Extensions />

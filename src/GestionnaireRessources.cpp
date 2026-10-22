@@ -4,7 +4,7 @@
 
 
 template<>
-std::unordered_map<std::string_view, sf::Texture> GestionnaireRessources<sf::Texture>::ressources{};
+std::unordered_map<std::string, sf::Texture> GestionnaireRessources<sf::Texture>::ressources{};
 
 template<>
-std::unordered_map<std::string_view, sf::SoundBuffer> GestionnaireRessources<sf::SoundBuffer>::ressources{};
+std::unordered_map<std::string, sf::SoundBuffer> GestionnaireRessources<sf::SoundBuffer>::ressources{};
